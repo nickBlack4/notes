@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import NoteItems from "./NoteItems";
 
 class Notepad extends Component {
     constructor(props) {
@@ -30,6 +31,10 @@ class Notepad extends Component {
         this._inputElement.value = "";
 
         console.log(this.state.items);
+
+        // override form default behavior to reload page
+        e.preventDefault();
+
     }
 
 
@@ -45,9 +50,7 @@ class Notepad extends Component {
                     </textarea>
                     <button type="submit">add</button>
                 </form>
-                
-
-                
+                <NoteItems entries={this.state.items} />
             </div>
         )
     }
