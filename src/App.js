@@ -7,9 +7,9 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Notepad />
                 <Menu />
                 <Notes />
+                <Notepad />
             </div>
         )
     }
