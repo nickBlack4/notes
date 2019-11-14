@@ -1,19 +1,30 @@
 
- .notes {
-   background-color: red;
- }
+
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #66CCFF;
+    font-family: sans-serif;
+  }
+  
+  #container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
  .notepad textarea {
-   background-color: rgb(255, 239, 96);
+   background-color: rgb(255, 254, 242);
    border: 1px solid black;
-   border-radius: 10px;
-   box-shadow: 1px 3px 3px #000;
+   border-radius: 4px;
+   box-shadow: 1px 2px 5px #000;
    width: 100%;
+   height: 75%;
    resize: none;
    margin: 5px;
    font-size: 14px;
-   border: none;
    font-weight: 300;
+   padding: 20px;
  }
 
  .notepad textarea:focus {
@@ -29,6 +40,7 @@
   color: #FFF;
   border: 2px solid #0066FF;
   border-radius: 5px;
+  outline: 0;
 }
 
 .notepad button:hover {
@@ -37,30 +49,18 @@
     cursor: pointer;
 }
 
- .menu {
-   background-color: skyblue;
- }
-
- body {
-  padding: 50px;
-  background-color: #66CCFF;
-  font-family: sans-serif;
-}
-
-#container {
-  display: flex;
-  justify-content: flex;
-}
 
 .theList li {
   color: #333;
   background-color: rgba(255, 255, 255, .5);
   padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
+  /* margin-bottom: 15px; */
+  border-bottom: 1px solid #000;
+  border-radius: 2px;
   list-style: none;
 
   transition: background-color .2s ease-out;
+
 }
 
 .theList li:hover {

@@ -49,17 +49,30 @@ class Notepad extends Component {
 
     render() {
         return (
+            
             <div className="notepad">
+                
                 {/* when form is submitted, addItem method will be called */}
-                <form onSubmit={this.addItem}>
+                
+                <div className="notes-right">
+                    <form onSubmit={this.addItem}>
+
+                    <button onClick={() => console.log(null)}><i className="fas fa-trash-alt"></i></button>
+                    <button type="submit"><i className="fas fa-pencil-alt"></i></button>
                     <textarea ref={(a) => this._inputElement = a}
-                        placeholder="enter note" rows="10" cols="50">
+                            rows="20" cols="50">
 
                     </textarea>
-                    <button type="submit">add</button>
-                </form>
-                <NoteItems entries={this.state.items} 
+
+                    </form>
+                </div>
+                
+                <div className="notes-left">
+                    <NoteItems entries={this.state.items} 
                            delete={this.deleteItem} />
+                </div>
+                
+
             </div>
         )
     }
