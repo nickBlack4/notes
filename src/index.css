@@ -58,6 +58,11 @@
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
+  list-style: none;
+}
+
+ul.theList {
+  padding: 0;
 }
 
 

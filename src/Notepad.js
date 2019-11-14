@@ -10,6 +10,7 @@ class Notepad extends Component {
         }
 
         this.addItem = this.addItem.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
     }
 
     addItem(e) {
@@ -34,12 +35,17 @@ class Notepad extends Component {
 
         // override form default behavior to reload page
         e.preventDefault();
-
     }
 
-    
+    deleteItem(key) {
+        let filteredItems = this.state.items.filter(function (item) {
+            return (item.key !== key)
+        });
 
-
+        this.setState({
+            items: filteredItems
+        });
+    }
 
     render() {
         return (
@@ -52,7 +58,8 @@ class Notepad extends Component {
                     </textarea>
                     <button type="submit">add</button>
                 </form>
-                <NoteItems entries={this.state.items} />
+                <NoteItems entries={this.state.items} 
+                           delete={this.deleteItem} />
             </div>
         )
     }
