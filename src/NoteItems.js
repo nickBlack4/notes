@@ -7,7 +7,7 @@ class NoteItems extends Component {
 
     render() {
         let noteEntries = this.props.entries;
-        var listItems = noteEntries.map(this.createNotes);
+        let listItems = noteEntries.map(this.createNotes);
 
         return (
             <ul className="theList">
